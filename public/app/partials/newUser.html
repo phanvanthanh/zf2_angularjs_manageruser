@@ -1,0 +1,25 @@
+<div ng-controller="NewUserCtrl">
+    <form  class="form-horizontal">
+        <h1 class="page-header">Add New User</h1>
+        <fieldset>    
+            <div class="control-group">
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input id="username" type="text" class="input-block-level"
+                           required="true" ng-model="user.username"></input>
+                    <!-- <input type="hidden" name="id" value="13224" ng-model="album.id"> -->
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <input id="password" type="text" class="input-block-level" 
+                           ng-model="user.password" required="true"></input>
+                </div>
+            </div>
+        </fieldset> 
+        <div class="form-actions">			
+            <button class="btn btn-primary" ng-click="newUser()">Add User</button>
+        </div>
+    </form>
+</div>

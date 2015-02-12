@@ -1,0 +1,25 @@
+<div ng-controller="ListUserCtrl">
+    <h1 class="page-header">List User</h1>
+    <a href="#/newUser">Add user</a>&nbsp;<a href="#/login">Login</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="25px">#id</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th width="50px">Edit</th>
+                <th width="50px">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="u in users">
+                <td>{{u.id}}</td>
+                <td><a href="#/user/{{u.id}}">{{u.username}}</a></td>
+                <td><span>{{u.password}}</span></td> 
+                <td><a href="#/editUser/{{u.id}}">Edit</a></td>
+                <td><a ng-click="deleteUser($index)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
